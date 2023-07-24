@@ -27,7 +27,8 @@ public class CurrencyConversionController {
 				CurrencyConversion.class, uriVariables);
 		
 		CurrencyConversion currencyConversion = responseEntity.getBody();
-		return new CurrencyConversion(currencyConversion.getId(),from, to, quant, 
+		return new CurrencyConversion(currencyConversion.getId(),from, to, 
+				quant, 
 				currencyConversion.getConversionMultiple(),
 				quant.multiply(currencyConversion.getConversionMultiple()),
 				currencyConversion.getEnvironment());
